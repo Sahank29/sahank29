@@ -1,12 +1,13 @@
 import Head from 'next/head'
 import {BsFillMoonStarsFill} from 'react-icons/bs'
-import {AiFillTwitterCircle,AiFillLinkedin,AiFillYoutube} from 'react-icons/ai'
+import {AiFillTwitterCircle,AiFillLinkedin,AiFillGithub} from 'react-icons/ai'
 import devsan from '../../public/image.jpg'
 import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Home() {
   const [darkMode,setDarkMode] = useState(false);
+
   return (
     <>
     <div className={darkMode ? "dark" : ""}>
@@ -31,9 +32,16 @@ export default function Home() {
             <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto'>I use creative approach for problem solving.</p>
           </div>
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
-            <AiFillTwitterCircle />
+            <a href= "https://twitter.com/sahank29">
+              <AiFillTwitterCircle/>
+            </a>
+            <a href='https://www.linkedin.com/in/sahan-poojari-308b47214/'>
             <AiFillLinkedin/>
-            <AiFillYoutube/>
+            </a>
+            <a href='https://github.com/Sahank29'>
+              <AiFillGithub/>
+            </a>
+            
           </div>
           <div className='relative mx-auto rounded-full w-80 h-80 mt-10 overflow-hidden md:h-96 md:w-96'>
             <Image src={devsan} layout='fill' objectFit='cover'/>
