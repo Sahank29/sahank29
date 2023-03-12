@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { BsFillMoonStarsFill } from 'react-icons/bs'
+import { BsFillMoonStarsFill,BsFillSunFill } from 'react-icons/bs'
 import { AiFillTwitterCircle, AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
 import devsan from '../../public/image.jpg'
 import Image from 'next/image'
@@ -17,14 +17,19 @@ export default function Home() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <main className="bg-white px-7 md:px-7 lg:px-10 dark:bg-black md:dark:bg-gray-900" >
+        <main className="bg-white px-7 md:px-7 lg:px-10 dark:bg-gray-900" >
           <section className='min-h-screen'>
             <nav className='py-5 flex justify-between md:py-7'>
               <h1 className='text-xl font-burtons dark:text-white'>developedbySahan</h1>
               <ul className='flex items-center'>
-                <li><BsFillMoonStarsFill onClick={() => {
+                <li>{darkMode ? 
+                <BsFillSunFill onClick={() => {
                   setDarkMode(!darkMode)
-                }} className='cursor-pointer-2xl dark:text-white' /></li>
+                }} className='cursor-pointer-2xl dark:text-white'/>: 
+                <BsFillMoonStarsFill onClick={() => {
+                  setDarkMode(!darkMode)
+                }} className='cursor-pointer-2xl' />
+                }</li>
                 {/* <li><a className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8' href="https://drive.google.com/file/d/1XoOcccc4fPPV1GlID2aG7w4zfrGqQkda/view?usp=sharing">Resume</a></li> */}
               </ul>
             </nav>
@@ -34,7 +39,7 @@ export default function Home() {
             <div className='text-center p-5'>
               <h2 className='text-4xl py-3 text-teal-600 font-medium md:text-6xl'>Sahan C Poojari</h2>
               <h3 className='text-2xl py-2 md:text-3xl dark:text-white'>Software Developer Intern</h3>
-              <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-white'>I use creative approach for problem solving.</p>
+              <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-gray-200'>I use creative approach for problem solving.</p>
             </div>
             <div className='text-5xl flex justify-center gap-10 md:gap-16 py-3 text-gray-600 dark:text-white md:text-5xl lg:text-5xl'>
               <a href="https://twitter.com/sahank29">
